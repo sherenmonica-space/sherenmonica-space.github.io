@@ -10,7 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Icons -->
-  <script src="https://kit.fontawesome.com/4c2b6e1a8f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 
   <style>
     * {
@@ -19,10 +21,10 @@
       box-sizing: border-box;
     }
 
-    body {
+body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #e2e8f0;
+      background: linear-gradient(135deg, #F1D1B5, #F0B7A4);
+      color: #3b2f2f;
       scroll-behavior: smooth;
     }
 
@@ -98,15 +100,17 @@
       transition: 0.3s;
     }
 
-    .btn-primary {
-      background: #38bdf8;
-      color: #0f172a;
-    }
+.btn-primary {
+  background: #F0B7A4;
+  color: #ffffff;
+}
 
-    .btn-secondary {
-      border: 1px solid #38bdf8;
-      color: #38bdf8;
-    }
+
+.btn-secondary {
+  border: 1px solid #F0B7A4;
+  color: #F0B7A4;
+}
+
 
     .btn-primary:hover,
     .btn-secondary:hover {
@@ -136,8 +140,8 @@
       margin-top: 40px;
     }
 
-    .project-card {
-      background: rgba(30, 41, 59, 0.8);
+.project-card {
+  background: #F1D1B5;
       padding: 25px;
       border-radius: 16px;
       transition: 0.3s;
@@ -198,7 +202,7 @@
 <body>
 
 <nav>
-  <h1>Sheren</h1>
+  <h1>Sheren Monica's Dashboard</h1>
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -216,11 +220,20 @@
     <a href="#contact" class="btn-secondary">Let’s Collaborate</a>
   </div>
 
-  <div class="social-icons">
-    <a href="https://instagram.com/shrchey" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://linkedin.com/in/sherenrachmad" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="mailto:sherenrachmad22@gmail.com"><i class="fas fa-envelope"></i></a>
-  </div>
+<div class="social-icons">
+  <a href="https://instagram.com/shrchey" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+
+  <a href="https://linkedin.com/in/sherenrachmad" target="_blank">
+    <i class="fa-brands fa-linkedin"></i>
+  </a>
+
+  <a href="mailto:sherenrachmad22@gmail.com">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+</div>
+
 </section>
 
 <section id="about">
@@ -259,7 +272,7 @@ I am a results-driven Data Analyst with strong analytical thinking and clear com
 <section id="contact" class="contact-section">
   <h2>Contact Me</h2>
   <p>Let’s collaborate on data-driven solutions.</p>
-  <a class="contact-btn" href="mailto:YOUR_EMAIL@gmail.com">Send Email</a>
+  <a href="#contact">Contact</a>
 </section>
 
 <script>
