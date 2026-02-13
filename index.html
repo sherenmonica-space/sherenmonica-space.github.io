@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sheren Monica | Data Analyst</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <h1>Sheren</h1>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <h2>Data Analyst</h2>
+  <p id="typing"></p>
+  <button onclick="scrollToProjects()">View Projects</button>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I specialize in Python, SQL, and statistical modeling.
+    I transform raw data into strategic business insights.
+  </p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+
+  <div class="card" onclick="toggle(this)">
+    <h3>Customer Churn Analytics</h3>
+    <p class="hidden">
+      Built logistic regression model to identify high-risk customers and improve retention strategy.
+    </p>
+  </div>
+
+  <div class="card" onclick="toggle(this)">
+    <h3>Sales Performance Dashboard</h3>
+    <p class="hidden">
+      Developed KPI dashboard to monitor revenue trends and regional performance.
+    </p>
+  </div>
+
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: sherenrachmad22@gmail.com</p>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
