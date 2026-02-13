@@ -1,17 +1,204 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Sheren Monica | Data Analyst</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
+  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/4c2b6e1a8f.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e2e8f0;
+      scroll-behavior: smooth;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 25px 80px;
+      position: fixed;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+    }
+
+    nav h1 {
+      font-weight: 600;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #cbd5e1;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    section {
+      padding: 140px 80px;
+    }
+
+    .hero {
+      text-align: center;
+      padding-top: 220px;
+    }
+
+    .hero-name {
+      font-size: 58px;
+      font-weight: 700;
+    }
+
+    .hero-role {
+      font-size: 22px;
+      margin-top: 12px;
+      color: #94a3b8;
+    }
+
+    #typing {
+      margin-top: 25px;
+      font-size: 20px;
+      color: #38bdf8;
+    }
+
+    .hero-buttons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #38bdf8;
+      color: #0f172a;
+    }
+
+    .btn-secondary {
+      border: 1px solid #38bdf8;
+      color: #38bdf8;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+      transform: translateY(-4px);
+    }
+
+    .social-icons {
+      margin-top: 30px;
+    }
+
+    .social-icons a {
+      margin: 0 12px;
+      font-size: 22px;
+      color: #cbd5e1;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #38bdf8;
+      transform: translateY(-4px);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .project-card {
+      background: rgba(30, 41, 59, 0.8);
+      padding: 25px;
+      border-radius: 16px;
+      transition: 0.3s;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: #38bdf8;
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .project-card a {
+      display: inline-block;
+      margin-top: 15px;
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .insight-box {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .insight-text {
+      margin-top: 15px;
+      color: #38bdf8;
+      font-style: italic;
+    }
+
+    .contact-section {
+      text-align: center;
+    }
+
+    .contact-btn {
+      margin-top: 25px;
+      display: inline-block;
+      padding: 12px 28px;
+      background: #38bdf8;
+      color: #0f172a;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .contact-btn:hover {
+      transform: translateY(-4px);
+    }
+
+  </style>
 </head>
+
 <body>
 
 <nav>
-  <h1>Sheren Monica Dashboard</h1>
+  <h1>Sheren</h1>
   <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
@@ -20,45 +207,107 @@
 </nav>
 
 <section class="hero">
-  <h2>Data Analyst</h2>
+  <h1 class="hero-name">Sheren Monica</h1>
+  <h2 class="hero-role">Data Analyst</h2>
   <p id="typing"></p>
-  <button onclick="scrollToProjects()">View Projects</button>
+
+  <div class="hero-buttons">
+    <a href="#projects" class="btn-primary">View Projects</a>
+    <a href="#contact" class="btn-secondary">Let’s Collaborate</a>
+  </div>
+
+  <div class="social-icons">
+    <a href="https://instagram.com/shrchey" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://linkedin.com/in/sherenrachmad" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:sherenrachmad22@gmail.com"><i class="fas fa-envelope"></i></a>
+  </div>
 </section>
 
 <section id="about">
   <h2>About Me</h2>
   <p>
-    I specialize in Python, SQL, and statistical modeling.
-    I transform raw data into strategic business insights.
+I am a results-driven Data Analyst with strong analytical thinking and clear communication skills. I excel in performance evaluation and data handling, providing actionable insights that enhance decision-making. My experience enables me to simplify complex data into clear, structured reports, ensuring effective communication with stakeholders. I am well-equipped to deliver impactful insights in a professional environment.
   </p>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
 
-  <div class="card" onclick="toggle(this)">
-    <h3>Customer Churn Analytics</h3>
-    <p class="hidden">
-      Built logistic regression model to identify high-risk customers and improve retention strategy.
-    </p>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <h3>Customer Churn Prediction</h3>
+      <p>Logistic regression model identifying high-risk segments.</p>
+      <a href="https://github.com/YOUR_USERNAME/churn-project" target="_blank">View Project →</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Sales Performance Dashboard</h3>
+      <p>Interactive KPI monitoring dashboard.</p>
+      <a href="https://github.com/YOUR_USERNAME/sales-dashboard" target="_blank">View Project →</a>
+    </div>
+
   </div>
 
-  <div class="card" onclick="toggle(this)">
-    <h3>Sales Performance Dashboard</h3>
-    <p class="hidden">
-      Developed KPI dashboard to monitor revenue trends and regional performance.
-    </p>
+  <div class="insight-box">
+    <button class="btn-secondary" onclick="generateInsight()">Generate Random Data Insight</button>
+    <p class="insight-text" id="insight"></p>
   </div>
 
 </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: sherenrachmad22@gmail.com</p>
-  <p>LinkedIn : Sheren Rosari Monica Rachmad</p>
+<section id="contact" class="contact-section">
+  <h2>Contact Me</h2>
+  <p>Let’s collaborate on data-driven solutions.</p>
+  <a class="contact-btn" href="mailto:YOUR_EMAIL@gmail.com">Send Email</a>
 </section>
 
-<script src="script.js"></script>
+<script>
+  const textArray = [
+    "I analyze data.",
+    "I build predictive models.",
+    "I optimize business decisions."
+  ];
+
+  let i = 0;
+  let j = 0;
+  let currentText = "";
+  let isDeleting = false;
+
+  function type() {
+    if (i < textArray.length) {
+      if (!isDeleting && j <= textArray[i].length) {
+        currentText = textArray[i].substring(0, j++);
+      } else if (isDeleting && j >= 0) {
+        currentText = textArray[i].substring(0, j--);
+      }
+
+      document.getElementById("typing").textContent = currentText;
+
+      if (j === textArray[i].length) isDeleting = true;
+      if (j === 0 && isDeleting) {
+        isDeleting = false;
+        i++;
+      }
+
+      setTimeout(type, 90);
+    }
+  }
+
+  type();
+
+  const insights = [
+    "Correlation is not causation.",
+    "Always check missing values.",
+    "If it's not significant, it's just intuition.",
+    "Data tells a story. You interpret it."
+  ];
+
+  function generateInsight() {
+    const random = insights[Math.floor(Math.random() * insights.length)];
+    document.getElementById("insight").textContent = random;
+  }
+</script>
 
 </body>
 </html>
