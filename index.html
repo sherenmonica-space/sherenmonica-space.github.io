@@ -136,6 +136,8 @@
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
+            position: relative;
+            overflow: hidden;
         }
 
         .btn-primary {
@@ -168,8 +170,8 @@
         }
 
         .social-icon {
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             background: var(--card-bg);
             display: flex;
@@ -183,12 +185,23 @@
             text-decoration: none;
         }
 
+        .social-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
         .social-icon:hover {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             transform: translateY(-8px);
             border-color: var(--primary-color);
             box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+        }
+
+        .social-icon:hover svg {
+            fill: white;
         }
 
         /* Background decoration */
@@ -216,13 +229,7 @@
             animation: float 8s ease-in-out infinite reverse;
         }
 
-        /* About Section */
-        .about {
-            padding: 6rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
+        /* Section Title */
         .section-title {
             font-size: 2.5rem;
             font-weight: 800;
@@ -241,6 +248,13 @@
             height: 4px;
             background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
             border-radius: 2px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .about-content {
@@ -286,12 +300,6 @@
             transform: translateY(-8px);
             box-shadow: 0 12px 30px rgba(255, 107, 107, 0.25);
             background: linear-gradient(135deg, rgba(255, 217, 61, 0.05), rgba(255, 107, 107, 0.05));
-        }
-
-        .skill-card i {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
         }
 
         /* Projects Section */
@@ -377,10 +385,87 @@
             gap: 1rem;
         }
 
-        /* Contact Section */
+        /* Certification Section */
+        .certification {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(255, 233, 173, 0.3), rgba(255, 229, 217, 0.3));
+        }
+
+        .certification-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cert-card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(255, 107, 107, 0.1);
+        }
+
+        .cert-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(255, 107, 107, 0.2);
+        }
+
+        .cert-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .cert-card h3 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-card p {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .cert-status {
+            margin-bottom: 1.5rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.2), rgba(255, 217, 61, 0.2));
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+        }
+
+        .cert-link {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .cert-link:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        
         .contact {
             padding: 6rem 2rem;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             text-align: center;
         }
@@ -401,13 +486,13 @@
 
         .contact-methods {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
             margin-top: 2rem;
         }
 
         .contact-method {
-            padding: 1.5rem;
+            padding: 1rem 1.5rem;
             background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 217, 61, 0.1));
             border-radius: 10px;
             border: 2px solid var(--border-color);
@@ -415,7 +500,10 @@
             cursor: pointer;
             text-decoration: none;
             color: inherit;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .contact-method:hover {
@@ -427,7 +515,25 @@
 
         .contact-method h4 {
             color: var(--primary-color);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            fill: var(--primary-color);
+        }
+
+        .contact-method p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin: 0;
+            word-break: break-word;
         }
 
         /* Footer */
@@ -482,6 +588,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
@@ -518,8 +628,8 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Sheren Monica</h1>
-            <div class="subtitle">Data Analyst & Insights Specialist</div>
-            <p>Transforming complex data into actionable insights. Specializing in predictive analytics, dashboard development, and data-driven decision making.</p>
+            <div class="subtitle">Data Analyst | Career Switcher</div>
+            <p>Passionate about uncovering insights from data. RevoU Full-Stack Data Analyst bootcamp graduate, equipped with modern tools and eager to solve real-world data challenges.</p>
             
             <div class="cta-buttons">
                 <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -527,12 +637,28 @@
             </div>
 
             <div class="social-links">
-                <a href="mailto:sherenrachmad22@gmail.com" class="social-icon" title="Email">✉</a>
-                <a href="https://instagram.com/shrchey" target="_blank" class="social-icon" title="Instagram">📷</a>
-                <a href="https://linkedin.com/in/sherenrachmad" target="_blank" class="social-icon" title="LinkedIn">in</a>
+                <a href="mailto:sherenrachmad22@gmail.com" class="social-icon" title="Email">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/shrchey" target="_blank" class="social-icon" title="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.646.069 4.85 0 3.204-.012 3.584-.07 4.85-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/in/sheren-rosari-monica-rachmad" target="_blank" class="social-icon" title="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
+
+
+
+
 
     <!-- About Section -->
     <section class="about" id="about">
@@ -540,9 +666,9 @@
         
         <div class="about-content">
             <div class="about-text">
-                <h3>Results-Driven Data Analyst</h3>
-                <p>I'm a passionate data analyst with a strong foundation in statistical analysis, data visualization, and business intelligence. I excel at transforming raw data into meaningful insights that drive strategic decision-making.</p>
-                <p>With expertise in Python, SQL, and advanced analytics tools, I've successfully delivered impactful solutions for diverse industries. My approach combines technical rigor with clear communication to ensure stakeholders understand and act on data findings.</p>
+                <h3>Career Switcher to Data Analyst</h3>
+                <p>I'm a career switcher from the education sector, bringing problem-solving skills and a passion for data-driven insights. My transition to data analysis is driven by curiosity and the desire to make a tangible impact through data.</p>
+                <p>Through RevoU's Full-Stack Data Analyst Bootcamp, I've developed strong foundations in data analysis, visualization, and business intelligence. I'm eager to apply my skills to real-world projects and continue growing as a data professional.</p>
             </div>
             
             <div>
@@ -619,6 +745,22 @@
         </div>
     </section>
 
+    <!-- Certification Section -->
+    <section class="certification" id="certification">
+        <div class="certification-container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-card">
+                <div class="cert-icon">📜</div>
+                <h3>Full-Stack Data Analyst</h3>
+                <p>RevoU</p>
+                <div class="cert-status">
+                    <span class="status-badge">In Progress</span>
+                </div>
+                <a href="#" class="cert-link" id="cert-link">View Certificate</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2 class="section-title">Get In Touch</h2>
@@ -628,16 +770,31 @@
             
             <div class="contact-methods">
                 <a href="mailto:sherenrachmad22@gmail.com" class="contact-method">
-                    <h4>📧 Email</h4>
+                    <h4>
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="contact-icon">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        Email
+                    </h4>
                     <p>sherenrachmad22@gmail.com</p>
                 </a>
                 <a href="https://instagram.com/shrchey" target="_blank" class="contact-method">
-                    <h4>📸 Instagram</h4>
+                    <h4>
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="contact-icon">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.646.069 4.85 0 3.204-.012 3.584-.07 4.85-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z"/>
+                        </svg>
+                        Instagram
+                    </h4>
                     <p>@shrchey</p>
                 </a>
-                <a href="https://linkedin.com/in/sherenrachmad" target="_blank" class="contact-method">
-                    <h4>💼 LinkedIn</h4>
-                    <p>Sheren Rosari Monica Rachmad</p>
+                <a href="https://linkedin.com/in/sheren-rosari-monica-rachmad" target="_blank" class="contact-method">
+                    <h4>
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="contact-icon">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+                        </svg>
+                        LinkedIn
+                    </h4>
+                    <p>Sheren Rosari Monica</p>
                 </a>
             </div>
 
@@ -672,6 +829,26 @@
             } else {
                 nav.style.background = 'rgba(255, 248, 240, 0.95)';
             }
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe stat cards and skill items
+        document.querySelectorAll('.project-card, .cert-card').forEach(el => {
+            observer.observe(el);
         });
     </script>
 </body>
