@@ -30,7 +30,7 @@
             overflow-x: hidden;
         }
 
-        /* Navigation */
+/* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -81,6 +81,7 @@
             justify-content: center;
             padding: 6rem 2rem 2rem;
             position: relative;
+            z-index: 2;
             overflow: hidden;
         }
 
@@ -229,6 +230,85 @@
             animation: float 8s ease-in-out infinite reverse;
         }
 
+        /* Certification Section */
+        .certification {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(255, 233, 173, 0.3), rgba(255, 229, 217, 0.3));
+            position: relative;
+            z-index: 2;
+        }
+
+        .certification-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cert-card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(255, 107, 107, 0.1);
+        }
+
+        .cert-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(255, 107, 107, 0.2);
+        }
+
+        .cert-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .cert-card h3 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-card p {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .cert-status {
+            margin-bottom: 1.5rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.2), rgba(255, 217, 61, 0.2));
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+        }
+
+        .cert-link {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .cert-link:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
         /* Section Title */
         .section-title {
             font-size: 2.5rem;
@@ -255,6 +335,8 @@
             padding: 6rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
 
         .about-content {
@@ -307,6 +389,8 @@
             padding: 6rem 2rem;
             background: linear-gradient(135deg, rgba(255, 233, 173, 0.3), rgba(255, 229, 217, 0.3));
             margin: 4rem 0;
+            position: relative;
+            z-index: 2;
         }
 
         .projects-container {
@@ -385,89 +469,51 @@
             gap: 1rem;
         }
 
-        /* Certification Section */
-        .certification {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, rgba(255, 233, 173, 0.3), rgba(255, 229, 217, 0.3));
+        .project-tools {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            font-weight: 500;
+            line-height: 1.5;
         }
 
-        .certification-container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .cert-card {
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 15px rgba(255, 107, 107, 0.1);
-        }
-
-        .cert-card:hover {
-            border-color: var(--primary-color);
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(255, 107, 107, 0.2);
-        }
-
-        .cert-icon {
-            font-size: 3rem;
+        .project-body p {
+            color: var(--text-secondary);
             margin-bottom: 1rem;
+            flex: 1;
         }
 
-        .cert-card h3 {
-            font-size: 1.5rem;
+        .project-description {
+            background: rgba(255, 217, 61, 0.08);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-color);
+            margin: 1rem 0;
+            font-size: 0.95rem;
+        }
+
+        .project-description p {
+            margin: 0;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .project-description strong {
             color: var(--text-primary);
+            display: block;
             margin-bottom: 0.5rem;
         }
 
-        .cert-card p {
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .cert-status {
-            margin-bottom: 1.5rem;
-        }
-
-        .status-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, rgba(255, 107, 107, 0.2), rgba(255, 217, 61, 0.2));
-            color: var(--primary-color);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            border: 1px solid var(--border-color);
-        }
-
-        .cert-link {
-            display: inline-block;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0.75rem 1.5rem;
-            border: 2px solid var(--border-color);
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-
-        .cert-link:hover {
-            background: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
-        }
-
-        
+        /* Contact Section */
         .contact {
             padding: 6rem 2rem;
             max-width: 1000px;
             margin: 0 auto;
             text-align: center;
+            position: relative;
+            z-index: 2;
         }
 
         .contact-content {
@@ -545,6 +591,8 @@
             color: white;
             font-size: 0.95rem;
             font-weight: 600;
+            position: relative;
+            z-index: 2;
         }
 
         /* Animations */
@@ -613,7 +661,7 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+<!-- Navigation -->
     <nav>
         <div class="logo">SM</div>
         <ul class="nav-links">
@@ -637,7 +685,7 @@
             </div>
 
             <div class="social-links">
-                <a href="mailto:sherenrachmad22@gmail.com" class="social-icon" title="Email">
+                <a href="/cdn-cgi/l/email-protection#b7c4dfd2c5d2d9c5d6d4dfdad6d38585f7d0dad6dedb99d4d8da" class="social-icon" title="Email">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                     </svg>
@@ -655,10 +703,6 @@
             </div>
         </div>
     </section>
-
-
-
-
 
     <!-- About Section -->
     <section class="about" id="about">
@@ -711,34 +755,109 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Customer Churn Prediction</h3>
+                        <h3>Customer Churn Analysis</h3>
                         <div class="project-tag">Machine Learning</div>
                     </div>
                     <div class="project-body">
-                        <p>Developed a logistic regression model to identify high-risk customer segments. Achieved 87% accuracy in predicting churn, enabling proactive retention strategies.</p>
-                        <a href="https://github.com/sherenmonica" target="_blank" class="project-link">View Project →</a>
+                        <p><strong>Key Metrics:</strong> 10,000 customers | Churn 20.37% | OR 1.68 (inactive + single product) | 30% adoption sim</p>
+                        <p>Churn driven by behavioral disengagement, not demographics. Product depth + activity status strongest predictors. Targeting inactive single-product users yields highest reduction impact.</p>
+                        
+                        <div class="project-description">
+                            <p><strong>Approach:</strong> Built logistic regression model on 10,000 customers to quantify churn drivers and interaction effects. Performed feature engineering and odds ratio evaluation to identify high-risk segments (OR 1.68 for inactive × single product). Conducted scenario simulation assuming 30% adoption to estimate achievable churn reduction.</p>
+                        </div>
+                        
+                        <div class="project-tools">Python · Logistic Regression · Feature Engineering</div>
+                        <a href="https://docs.google.com/presentation/d/1FDPk3lRIR7ScI9BcS4qRuwQje8F-rt9Y/edit?usp=sharing" target="_blank" class="project-link">View Presentation →</a>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Sales Performance Dashboard</h3>
-                        <div class="project-tag">BI & Visualization</div>
+                        <h3>Credit Card Segmentation</h3>
+                        <div class="project-tag">Customer Analytics</div>
                     </div>
                     <div class="project-body">
-                        <p>Created an interactive KPI monitoring dashboard with real-time data updates. Provides stakeholders with actionable insights on sales trends and performance metrics.</p>
-                        <a href="https://github.com/sherenmonica" target="_blank" class="project-link">View Project →</a>
+                        <p><strong>Key Metrics:</strong> Rp456.1B volume | Rp6.84B profit (1.5% margin) | Rp1.01B fraud loss | K=3 clusters</p>
+                        <p>Segment 2 = profit engine. Segment 1 = dormant with potential. Fraud reduction impacts profit faster than volume. Targeting high-value dormant segment unlocks biggest growth.</p>
+                        
+                        <div class="project-description">
+                            <p><strong>Approach:</strong> Analyzed six-month credit card transactions totaling Rp456.1B to evaluate profitability under a 1.5% margin model. Cleaned and standardized datasets before applying K-Means clustering (k=3) with feature scaling. Identified high-value, dormant, and conservative segments to support targeted performance strategy.</p>
+                        </div>
+                        
+                        <div class="project-tools">Python · K-Means · StandardScaler · EDA</div>
+                        <a href="https://docs.google.com/presentation/d/1EiCM2VAs1uk8DIFmhteSadhfmeAud0knW9wh3rkQ06c/edit?usp=sharing" target="_blank" class="project-link">View Analysis →</a>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Data Quality Assessment</h3>
-                        <div class="project-tag">Data Engineering</div>
+                        <h3>Corporate Profit Crisis</h3>
+                        <div class="project-tag">Business Analytics</div>
                     </div>
                     <div class="project-body">
-                        <p>Implemented comprehensive data quality framework identifying and resolving 500+ data inconsistencies. Improved overall data reliability by 35%.</p>
-                        <a href="https://github.com/sherenmonica" target="_blank" class="project-link">View Project →</a>
+                        <p><strong>Key Metrics:</strong> Sales ↑20.4% | Orders ↑28.3% | Profit ↓13.6%</p>
+                        <p>Growth driven by volume, not profitability. Excessive discounting and misaligned commission structure destroying margins. Recommended discount cap and incentive formula revision.</p>
+                        
+                        <div class="project-description">
+                            <p><strong>Approach:</strong> Conducted margin and KPI diagnostics to explain the 13.6% corporate profit decline despite 20.4% sales growth. Decomposed revenue, order volume, discount rate, and commission structure to isolate margin leakage drivers. Identified excessive discount dependency and misaligned incentives as primary contributors to profitability erosion.</p>
+                        </div>
+                        
+                        <div class="project-tools">Margin Analysis · KPI Breakdown · Root Cause Framework</div>
+                        <a href="https://docs.google.com/presentation/d/12LBpZuF8HLjef07rHZGlOH5xe2oehVPkLE0XtrL-Wz8/edit?usp=sharing" target="_blank" class="project-link">View Analysis →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>E-Commerce Campaign Optimization</h3>
+                        <div class="project-tag">Statistical Testing</div>
+                    </div>
+                    <div class="project-body">
+                        <p><strong>Key Metrics:</strong> 10,159 transactions | RoD 12/12 = 58.54% | Cost ratio = 1.71%</p>
+                        <p>Campaign 12/12 most cost-efficient. Campaign 11/11 highest revenue but overspends. Optimal strategy: scale like 11/11, spend like 12/12 to achieve 10% growth.</p>
+                        
+                        <div class="project-description">
+                            <p><strong>Approach:</strong> Analyzed 10,159 transaction records to evaluate revenue and discount efficiency across three campaigns. Applied data cleaning, IQR-based outlier filtering, and Return on Discount (RoD) calculations to benchmark cost efficiency. Identified 12/12 as the most efficient campaign model with lowest cost ratio.</p>
+                        </div>
+                        
+                        <div class="project-tools">Excel · IQR Outlier Removal · RoD Analysis · A/B Logic</div>
+                        <a href="https://docs.google.com/presentation/d/14FJ3px_3bOd3Arrl0-dn1dvunhVEsL0pg-90_uC0JKI/edit?usp=sharing" target="_blank" class="project-link">View Deck →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Grocery Sales SQL Analysis</h3>
+                        <div class="project-tag">SQL Analytics</div>
+                    </div>
+                    <div class="project-body">
+                        <p><strong>Key Metrics:</strong> ~98K customers | Confections = 12.87% revenue share | Top 3 = 35% concentration</p>
+                        <p>Revenue driven by customer depth, not headcount. Confections strongest via high repeat rate. Concentration risk exists—growth lever in dormant segments.</p>
+                        
+                        <div class="project-description">
+                            <p><strong>Approach:</strong> Performed multi-table SQL analysis to assess revenue contribution, pricing structure, repeat rate, and revenue per customer. Used CTEs and window functions to compute revenue share and concentration metrics. Found revenue variance driven by spending behavior rather than customer acquisition volume.</p>
+                        </div>
+                        
+                        <div class="project-tools">SQL · CTE · Window Functions · Aggregation</div>
+                        <a href="https://docs.google.com/presentation/d/1Z3s2xWqqMDA5OfnYFN3eG7V7SwCIXq7SWaJdi8_JqKs/edit?usp=sharing" target="_blank" class="project-link">View Deck →</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Personal Finance Dashboard</h3>
+                        <div class="project-tag">Data Visualization</div>
+                    </div>
+                    <div class="project-body">
+                        <p><strong>Key Metrics:</strong> 1,000 transactions | 94% budget utilization | 111% discretionary overspending</p>
+                        <p>Mid-value frequent transactions drive pressure, not outliers. Year-end spike creates cumulative budget stress. Dashboard enables early detection of spending risk.</p>
+                        
+                        <div class="project-description">
+                            <p><strong>Approach:</strong> Developed Tableau dashboard integrating transaction, merchant, and budget datasets using relationship-based data modeling. Built FIXED LOD calculations to ensure consistent aggregation across views. Identified overspending patterns (111% discretionary utilization) and seasonal budget pressure through trend analysis.</p>
+                        </div>
+                        
+                        <div class="project-tools">Tableau · FIXED LOD · Data Modeling</div>
+                        <a href="https://docs.google.com/presentation/d/1ASOSnq_oqJ5u7np2VT1Ejx6GS3VTd3iRfCXFE4pO9P8/edit?usp=sharing" target="_blank" class="project-link">View Dashboard →</a>
                     </div>
                 </div>
             </div>
@@ -756,7 +875,7 @@
                 <div class="cert-status">
                     <span class="status-badge">In Progress</span>
                 </div>
-                <a href="#" class="cert-link" id="cert-link">View Certificate</a>
+                <a href="#" class="cert-link">View Certificate</a>
             </div>
         </div>
     </section>
@@ -769,14 +888,14 @@
             <p>Ready to collaborate on data-driven projects? Let's connect and explore how I can help transform your data into insights.</p>
             
             <div class="contact-methods">
-                <a href="mailto:sherenrachmad22@gmail.com" class="contact-method">
+                <a href="/cdn-cgi/l/email-protection#aad9c2cfd8cfc4d8cbc9c2c7cbce9898eacdc7cbc3c684c9c5c7" class="contact-method">
                     <h4>
                         <svg viewBox="0 0 24 24" fill="currentColor" class="contact-icon">
                             <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                         </svg>
                         Email
                     </h4>
-                    <p>sherenrachmad22@gmail.com</p>
+                    <p><span class="__cf_email__" data-cfemail="a8dbc0cddacdc6dac9cbc0c5c9cc9a9ae8cfc5c9c1c486cbc7c5">[email&#160;protected]</span></p>
                 </a>
                 <a href="https://instagram.com/shrchey" target="_blank" class="contact-method">
                     <h4>
@@ -799,7 +918,7 @@
             </div>
 
             <div style="margin-top: 2rem;">
-                <a href="mailto:sherenrachmad22@gmail.com" class="btn btn-primary">Send me an Email</a>
+                <a href="/cdn-cgi/l/email-protection#3d4e55584f58534f5c5e55505c590f0f7d5a505c5451135e5250" class="btn btn-primary">Send me an Email</a>
             </div>
         </div>
     </section>
@@ -809,7 +928,8 @@
         <p>&copy; Sheren Monica. All rights reserved. | Built with passion and data.</p>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -840,16 +960,3 @@
         const observer = new IntersectionObserver(function(entries) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Observe stat cards and skill items
-        document.querySelectorAll('.project-card, .cert-card').forEach(el => {
-            observer.observe(el);
-        });
-    </script>
-</body>
-</html>
