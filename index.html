@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sheren Monica - Data Analyst Portfolio</title>
     <style>
-        html {
-            scroll-behavior: auto !important;
-        }
-
-        *[id] {
-            scroll-margin-top: 0 !important;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -35,10 +27,9 @@
             background: linear-gradient(135deg, #fff8f0 0%, #ffe5d9 100%);
             color: var(--text-primary);
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-/* Navigation */
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -74,6 +65,7 @@
             text-decoration: none;
             transition: all 0.3s ease;
             font-weight: 500;
+            cursor: pointer;
         }
 
         .nav-links a:hover {
@@ -89,14 +81,12 @@
             justify-content: center;
             padding: 6rem 2rem 2rem;
             position: relative;
-            z-index: 2;
             overflow: hidden;
         }
 
         .hero-content {
             text-align: center;
             max-width: 800px;
-            z-index: 2;
             animation: fadeInUp 0.8s ease;
         }
 
@@ -145,8 +135,6 @@
             transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
-            position: relative;
-            overflow: hidden;
         }
 
         .btn-primary {
@@ -187,7 +175,6 @@
             align-items: center;
             justify-content: center;
             color: var(--primary-color);
-            font-size: 1.3rem;
             transition: all 0.3s ease;
             border: 2px solid var(--border-color);
             box-shadow: 0 4px 10px rgba(255, 107, 107, 0.2);
@@ -198,7 +185,6 @@
             width: 24px;
             height: 24px;
             fill: var(--primary-color);
-            transition: all 0.3s ease;
         }
 
         .social-icon:hover {
@@ -213,138 +199,11 @@
             fill: white;
         }
 
-        /* Background decoration */
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(255, 107, 107, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            top: -100px;
-            right: -100px;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(255, 217, 61, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-            bottom: -50px;
-            left: -100px;
-            animation: float 8s ease-in-out infinite reverse;
-        }
-
-        /* Certification Section */
-        .certification {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, rgba(255, 233, 173, 0.3), rgba(255, 229, 217, 0.3));
-            position: relative;
-            z-index: 2;
-        }
-
-        .certification-container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .cert-card {
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 6px 15px rgba(255, 107, 107, 0.1);
-        }
-
-        .cert-card:hover {
-            border-color: var(--primary-color);
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(255, 107, 107, 0.2);
-        }
-
-        .cert-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .cert-card h3 {
-            font-size: 1.5rem;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .cert-card p {
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .cert-status {
-            margin-bottom: 1.5rem;
-        }
-
-        .status-badge {
-            display: inline-block;
-            background: linear-gradient(135deg, rgba(255, 107, 107, 0.2), rgba(255, 217, 61, 0.2));
-            color: var(--primary-color);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            border: 1px solid var(--border-color);
-        }
-
-        .cert-link {
-            display: inline-block;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0.75rem 1.5rem;
-            border: 2px solid var(--border-color);
-            border-radius: 25px;
-            transition: all 0.3s ease;
-        }
-
-        .cert-link:hover {
-            background: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
-        }
-
-        /* Section Title */
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 3rem;
-            text-align: center;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-            border-radius: 2px;
-        }
-
         /* About Section */
         .about {
             padding: 6rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
-            position: relative;
-            z-index: 2;
         }
 
         .about-content {
@@ -389,7 +248,6 @@
             border-color: var(--primary-color);
             transform: translateY(-8px);
             box-shadow: 0 12px 30px rgba(255, 107, 107, 0.25);
-            background: linear-gradient(135deg, rgba(255, 217, 61, 0.05), rgba(255, 107, 107, 0.05));
         }
 
         /* Projects Section */
@@ -397,13 +255,31 @@
             padding: 6rem 2rem;
             background: linear-gradient(135deg, rgba(255, 233, 173, 0.3), rgba(255, 229, 217, 0.3));
             margin: 4rem 0;
-            position: relative;
-            z-index: 2;
         }
 
         .projects-container {
             max-width: 1200px;
             margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
         }
 
         .projects-grid {
@@ -421,6 +297,7 @@
             display: flex;
             flex-direction: column;
             box-shadow: 0 6px 15px rgba(255, 107, 107, 0.1);
+            cursor: pointer;
         }
 
         .project-card:hover {
@@ -429,10 +306,83 @@
             box-shadow: 0 20px 40px rgba(255, 107, 107, 0.25);
         }
 
+        .project-card.expanded {
+            grid-column: 1 / -1;
+            overflow: visible;
+        }
+
+        .project-card.expanded .project-body {
+            display: block;
+        }
+
+        .project-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .project-toggle:hover {
+            background: rgba(255, 255, 255, 0.5);
+            border-color: white;
+            transform: scale(1.15);
+        }
+
+        .project-toggle:active {
+            transform: scale(0.95);
+        }
+
         .project-header {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             padding: 2rem;
             color: white;
+            position: relative;
+        }
+
+        .project-expanded-content {
+            display: none;
+            padding: 2rem;
+            background: var(--card-bg);
+            border-top: 2px solid var(--border-color);
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .project-card.expanded .project-expanded-content {
+            display: block;
+        }
+
+        .project-expanded-content h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .project-expanded-content p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-expanded-content img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            max-height: 400px;
+            object-fit: cover;
         }
 
         .project-header h3 {
@@ -458,39 +408,13 @@
 
         .project-body p {
             color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            flex: 1;
-        }
-
-        .project-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-            align-self: flex-start;
-        }
-
-        .project-link:hover {
-            gap: 1rem;
-        }
-
-        .project-tools {
-            font-size: 0.85rem;
-            color: var(--primary-color);
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--border-color);
-            font-weight: 500;
-            line-height: 1.5;
-        }
-
-        .project-body p {
-            color: var(--text-secondary);
             margin-bottom: 1rem;
             flex: 1;
+        }
+
+        .project-body p strong {
+            color: var(--text-primary);
+            font-weight: 600;
         }
 
         .project-description {
@@ -514,14 +438,164 @@
             margin-bottom: 0.5rem;
         }
 
+        .project-tools {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .project-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+            margin-top: 1rem;
+        }
+
+        .project-link:hover {
+            gap: 1rem;
+        }
+
+        /* Education Section */
+        .education {
+            padding: 6rem 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .education-content {
+            display: grid;
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .edu-item {
+            padding: 2rem;
+            background: var(--card-bg);
+            border-radius: 10px;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(255, 107, 107, 0.1);
+        }
+
+        .edu-item:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(255, 107, 107, 0.25);
+        }
+
+        .edu-item h3 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .edu-school {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .edu-year {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin: 0.25rem 0 0.75rem 0;
+        }
+
+        .edu-description {
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Certification Section */
+        .certification {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, rgba(255, 233, 173, 0.3), rgba(255, 229, 217, 0.3));
+        }
+
+        .certification-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cert-card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 2px solid var(--border-color);
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(255, 107, 107, 0.1);
+        }
+
+        .cert-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(255, 107, 107, 0.2);
+        }
+
+        .cert-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .cert-card h3 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-card p {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.2), rgba(255, 217, 61, 0.2));
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .cert-link {
+            display: inline-block;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .cert-link:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
         /* Contact Section */
         .contact {
             padding: 6rem 2rem;
             max-width: 1000px;
             margin: 0 auto;
             text-align: center;
-            position: relative;
-            z-index: 2;
         }
 
         .contact-content {
@@ -599,8 +673,6 @@
             color: white;
             font-size: 0.95rem;
             font-weight: 600;
-            position: relative;
-            z-index: 2;
         }
 
         /* Animations */
@@ -612,15 +684,6 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(20px);
             }
         }
 
@@ -661,41 +724,66 @@
             .section-title {
                 font-size: 2rem;
             }
-
-            .hero {
-                min-height: 80vh;
-            }
         }
     </style>
+    <script>
+        // Define functions at top level (before DOM renders)
+        function toggleProject(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            const card = event.target.closest('.project-card');
+            if (!card) return;
+            
+            const button = event.target;
+            
+            // Close other projects
+            document.querySelectorAll('.project-card.expanded').forEach(el => {
+                if (el !== card) {
+                    el.classList.remove('expanded');
+                    const toggle = el.querySelector('.project-toggle');
+                    if (toggle) toggle.textContent = '+';
+                }
+            });
+            
+            // Toggle current project
+            card.classList.toggle('expanded');
+            button.textContent = card.classList.contains('expanded') ? '−' : '+';
+        }
+
+        function smoothScroll(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    </script>
 </head>
 <body>
-<div id="top" style="display:none;"></div>
-
-<!-- Navigation -->
+    <!-- Navigation -->
     <nav>
         <div class="logo">SM</div>
         <ul class="nav-links">
-            <li><a onclick="scrollToSection('home'); return false;">Home</a></li>
-            <li><a onclick="scrollToSection('about'); return false;">About</a></li>
-            <li><a onclick="scrollToSection('projects'); return false;">Projects</a></li>
-            <li><a onclick="scrollToSection('contact'); return false;">Contact</a></li>
+            <li><a onclick="smoothScroll('hero'); return false;">Home</a></li>
+            <li><a onclick="smoothScroll('about'); return false;">About</a></li>
+            <li><a onclick="smoothScroll('projects'); return false;">Projects</a></li>
+            <li><a onclick="smoothScroll('contact'); return false;">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero" id="hero">
         <div class="hero-content">
             <h1>Sheren Monica</h1>
             <div class="subtitle">Data Analyst | Career Switcher</div>
             <p>Passionate about uncovering insights from data. RevoU Full-Stack Data Analyst bootcamp graduate, equipped with modern tools and eager to solve real-world data challenges.</p>
             
             <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Let's Collaborate</a>
+                <button class="btn btn-primary" onclick="smoothScroll('projects')">View My Work</button>
+                <button class="btn btn-secondary" onclick="smoothScroll('contact')">Let's Collaborate</button>
             </div>
 
             <div class="social-links">
-                <a href="/cdn-cgi/l/email-protection#5b28333e293e35293a3833363a3f69691b3c363a323775383436" class="social-icon" title="Email">
+                <a href="/cdn-cgi/l/email-protection#3f4c575a4d5a514d5e5c57525e5b0d0d7f58525e5653115c5052" class="social-icon" title="Email">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                         <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                     </svg>
@@ -757,6 +845,42 @@
         </div>
     </section>
 
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="education-container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-content">
+                <div class="edu-item">
+                    <h3>Bachelor of Science</h3>
+                    <p class="edu-school">[Your University Name]</p>
+                    <p class="edu-year">[Year - Year]</p>
+                    <p class="edu-description">Major in [Your Major]. Relevant coursework in statistics, mathematics, and data analysis.</p>
+                </div>
+                
+                <div class="edu-item">
+                    <h3>Full-Stack Data Analyst Bootcamp</h3>
+                    <p class="edu-school">RevoU</p>
+                    <p class="edu-year">2024</p>
+                    <p class="edu-description">Intensive bootcamp covering data analysis, SQL, Python, Tableau/Power BI, and business intelligence. Hands-on projects with real-world datasets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Section -->
+    <section class="certification" id="certification">
+        <div class="certification-container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="cert-card">
+                <div class="cert-icon">📜</div>
+                <h3>Full-Stack Data Analyst</h3>
+                <p>RevoU</p>
+                <div class="status-badge">Verified</div>
+                <a href="https://certificate.revou.co/[CERTIFICATE_ID]" class="cert-link">View Certificate</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
     <section class="projects" id="projects">
         <div class="projects-container">
@@ -765,6 +889,7 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
+                        <button class="project-toggle" onclick="toggleProject(event)">+</button>
                         <h3>Customer Churn Analysis</h3>
                         <div class="project-tag">Machine Learning</div>
                     </div>
@@ -779,10 +904,18 @@
                         <div class="project-tools">Python · Logistic Regression · Feature Engineering</div>
                         <a href="https://docs.google.com/presentation/d/1FDPk3lRIR7ScI9BcS4qRuwQje8F-rt9Y/edit?usp=sharing" target="_blank" class="project-link">View Presentation →</a>
                     </div>
+
+                    <div class="project-expanded-content">
+                        <h4>📊 Project Visualization</h4>
+                        <p><strong>Key Finding:</strong> Inactive single-product customers have 1.68x higher odds of churning. With 30% adoption of targeted intervention, churn rate can reduce from 20.37% to ~15%.</p>
+                        <p><strong>Data Distribution:</strong> Model trained on 10,000 customers, 20.37% churn baseline. Features: Product count, Account age, Transaction frequency, Support tickets.</p>
+                        <p><strong>Business Impact:</strong> Targeting 1,500 high-risk customers with retention programs could prevent 225+ churns quarterly.</p>
+                    </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-header">
+                        <button class="project-toggle" onclick="toggleProject(event)">+</button>
                         <h3>Credit Card Segmentation</h3>
                         <div class="project-tag">Customer Analytics</div>
                     </div>
@@ -797,10 +930,18 @@
                         <div class="project-tools">Python · K-Means · StandardScaler · EDA</div>
                         <a href="https://docs.google.com/presentation/d/1EiCM2VAs1uk8DIFmhteSadhfmeAud0knW9wh3rkQ06c/edit?usp=sharing" target="_blank" class="project-link">View Analysis →</a>
                     </div>
+
+                    <div class="project-expanded-content">
+                        <h4>📊 Segmentation Insights</h4>
+                        <p><strong>Segment Distribution:</strong> Segment 1 (25%) - Dormant but capable | Segment 2 (45%) - High-value, active | Segment 3 (30%) - Conservative, low-value</p>
+                        <p><strong>Profitability Breakdown:</strong> Segment 2 generates 70% of profits despite 45% of customers. Fraud rate 0.22% overall, but concentrated in Segment 1.</p>
+                        <p><strong>Strategic Recommendation:</strong> Activate Segment 1 (dormant) = highest ROI. Fraud reduction impacts profit growth faster than volume increase.</p>
+                    </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-header">
+                        <button class="project-toggle" onclick="toggleProject(event)">+</button>
                         <h3>Corporate Profit Crisis</h3>
                         <div class="project-tag">Business Analytics</div>
                     </div>
@@ -815,10 +956,18 @@
                         <div class="project-tools">Margin Analysis · KPI Breakdown · Root Cause Framework</div>
                         <a href="https://docs.google.com/presentation/d/12LBpZuF8HLjef07rHZGlOH5xe2oehVPkLE0XtrL-Wz8/edit?usp=sharing" target="_blank" class="project-link">View Analysis →</a>
                     </div>
+
+                    <div class="project-expanded-content">
+                        <h4>📊 Margin Leakage Analysis</h4>
+                        <p><strong>Root Cause Breakdown:</strong> Discount impact -8.3% margin | Commission structure -3.2% margin | Product mix shift -2.1% margin</p>
+                        <p><strong>Granular Findings:</strong> Average discount increased from 12% to 16% YoY. Commission as % of sales rose from 4% to 5.5%, misaligned with gross profit.</p>
+                        <p><strong>Recommended Actions:</strong> Implement discount cap at 15%, restructure commissions tied to profit not sales, optimize product mix. Projected margin recovery: 13.6% → 18% within 12 months.</p>
+                    </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-header">
+                        <button class="project-toggle" onclick="toggleProject(event)">+</button>
                         <h3>E-Commerce Campaign Optimization</h3>
                         <div class="project-tag">Statistical Testing</div>
                     </div>
@@ -833,10 +982,18 @@
                         <div class="project-tools">Excel · IQR Outlier Removal · RoD Analysis · A/B Logic</div>
                         <a href="https://docs.google.com/presentation/d/14FJ3px_3bOd3Arrl0-dn1dvunhVEsL0pg-90_uC0JKI/edit?usp=sharing" target="_blank" class="project-link">View Deck →</a>
                     </div>
+
+                    <div class="project-expanded-content">
+                        <h4>📊 Campaign Efficiency Comparison</h4>
+                        <p><strong>Campaign Performance:</strong> 12/12: RoD 58.54%, Cost ratio 1.71% (most efficient) | 11/11: RoD 82.3%, Cost ratio 3.24% (highest revenue) | 10/10: RoD 42.1%, Cost ratio 2.89%</p>
+                        <p><strong>Transaction Profile:</strong> 10,159 transactions analyzed, 12 outliers removed via IQR. Average order value varies 45% across campaigns.</p>
+                        <p><strong>Recommended Strategy:</strong> Hybrid approach - Scale 11/11 revenue model with 12/12 discount spending discipline. Projected 10% revenue growth with 2% reduction in discount burn.</p>
+                    </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-header">
+                        <button class="project-toggle" onclick="toggleProject(event)">+</button>
                         <h3>Grocery Sales SQL Analysis</h3>
                         <div class="project-tag">SQL Analytics</div>
                     </div>
@@ -851,10 +1008,18 @@
                         <div class="project-tools">SQL · CTE · Window Functions · Aggregation</div>
                         <a href="https://docs.google.com/presentation/d/1Z3s2xWqqMDA5OfnYFN3eG7V7SwCIXq7SWaJdi8_JqKs/edit?usp=sharing" target="_blank" class="project-link">View Deck →</a>
                     </div>
+
+                    <div class="project-expanded-content">
+                        <h4>📊 Revenue Driver Analysis</h4>
+                        <p><strong>Category Breakdown:</strong> Top 3 categories = 35% revenue share (Confections 12.87%, Dairy 11.43%, Meat/Poultry 10.7%). Remaining 12 categories = 65% revenue.</p>
+                        <p><strong>Customer Behavior:</strong> Confections customers have 3.2x higher repeat rate vs average. Revenue per customer varies 2.8x across categories, driven by purchase frequency not unit price.</p>
+                        <p><strong>Risk & Opportunity:</strong> Concentration risk exists (top 3 = 35%). Growth lever: Activate dormant customers in high-margin categories. ~98K customers, significant untapped potential.</p>
+                    </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-header">
+                        <button class="project-toggle" onclick="toggleProject(event)">+</button>
                         <h3>Personal Finance Dashboard</h3>
                         <div class="project-tag">Data Visualization</div>
                     </div>
@@ -869,23 +1034,14 @@
                         <div class="project-tools">Tableau · FIXED LOD · Data Modeling</div>
                         <a href="https://docs.google.com/presentation/d/1ASOSnq_oqJ5u7np2VT1Ejx6GS3VTd3iRfCXFE4pO9P8/edit?usp=sharing" target="_blank" class="project-link">View Dashboard →</a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Certification Section -->
-    <section class="certification" id="certification">
-        <div class="certification-container">
-            <h2 class="section-title">Certifications</h2>
-            <div class="cert-card">
-                <div class="cert-icon">📜</div>
-                <h3>Full-Stack Data Analyst</h3>
-                <p>RevoU</p>
-                <div class="cert-status">
-                    <span class="status-badge">In Progress</span>
+                    <div class="project-expanded-content">
+                        <h4>📊 Dashboard Metrics & Insights</h4>
+                        <p><strong>Budget Tracking:</strong> Overall utilization 94% (healthy). Discretionary category 111% over budget (overspend area). Monthly trend shows 8% growth in spending.</p>
+                        <p><strong>Transaction Pattern:</strong> 1,000 transactions over 12 months. Mid-range transactions (Rp500K-2M) drive 60% of pressure. Year-end spike 23% above monthly average.</p>
+                        <p><strong>Key Features:</strong> FIXED LOD ensures consistent aggregation across merchant/category filters. Merchant ranking identifies top 3 accounts = 34% spending. Seasonal analysis reveals December spike opportunity for budget planning.</p>
+                    </div>
                 </div>
-                <a href="#" class="cert-link">View Certificate</a>
             </div>
         </div>
     </section>
@@ -898,7 +1054,7 @@
             <p>Ready to collaborate on data-driven projects? Let's connect and explore how I can help transform your data into insights.</p>
             
             <div class="contact-methods">
-                <a href="/cdn-cgi/l/email-protection#c0b3a8a5b2a5aeb2a1a3a8ada1a4f2f280a7ada1a9aceea3afad" class="contact-method">
+                <a href="/cdn-cgi/l/email-protection#3b48535e495e55495a5853565a5f09097b5c565a525715585456" class="contact-method">
                     <h4>
                         <svg viewBox="0 0 24 24" fill="currentColor" class="contact-icon">
                             <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
@@ -928,7 +1084,7 @@
             </div>
 
             <div style="margin-top: 2rem;">
-                <a href="/cdn-cgi/l/email-protection#d3a0bbb6a1b6bda1b2b0bbbeb2b7e1e193b4beb2babffdb0bcbe" class="btn btn-primary">Send me an Email</a>
+                <a href="/cdn-cgi/l/email-protection#f5869d9087909b8794969d989491c7c7b59298949c99db969a98" class="btn btn-primary">Send me an Email</a>
             </div>
         </div>
     </section>
@@ -938,27 +1094,8 @@
         <p>&copy; Sheren Monica. All rights reserved. | Built with passion and data.</p>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-
-
-        // Force redirect hash to top on page load
-        if (window.location.hash && window.location.hash !== '#top') {
-            window.location.hash = '#top';
-        }
-
-        // Manual scroll function (bypass anchor behavior completely)
-        function scrollToSection(sectionId) {
-            const section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-
-        // Remove hash from URL on load
-        if (window.location.hash) {
-            window.history.replaceState(null, null, window.location.pathname);
-            window.scrollTo(0, 0);
-        }
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Additional script for scroll effects and animations
 
         // Navbar background on scroll
         window.addEventListener('scroll', function() {
@@ -971,4 +1108,13 @@
         });
 
         // Animate elements on scroll
-        const observerO
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease forwards';
+                    o
