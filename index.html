@@ -6,7 +6,11 @@
     <title>Sheren Monica - Data Analyst Portfolio</title>
     <style>
         html {
-            scroll-behavior: smooth;
+            scroll-behavior: auto !important;
+        }
+
+        *[id] {
+            scroll-margin-top: 0 !important;
         }
 
         * {
@@ -935,16 +939,15 @@
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 
 
-        // Immediately remove hash on script execution
-        if (window.location.hash) {
-            window.history.replaceState(null, null, window.location.pathname);
-            window.scrollTo(0, 0);
-        }
-
-        // Also handle on load
-        window.addEventListener('load', function() {
-            window.scrollTo(0, 0);
-        });
+        // AGGRESSIVE: Remove hash AND scroll to top immediately
+        (function() {
+            if (window.location.hash) {
+                window.location.hash = '';
+                window.scrollTo(0, 0);
+                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = 0;
+            }
+        })();
 
         // Smooth scrolling dengan manual scroll (bukan default anchor)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
