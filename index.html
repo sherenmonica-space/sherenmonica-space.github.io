@@ -385,6 +385,34 @@
             object-fit: cover;
         }
 
+        .project-detail-section {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .project-detail-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .project-detail-section h5 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-detail-section p {
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
         .project-header h3 {
             font-size: 1.5rem;
             margin-bottom: 0.5rem;
@@ -881,22 +909,45 @@
                         <div class="project-tag">Machine Learning</div>
                     </div>
                     <div class="project-body">
-                        <p><strong>Key Metrics:</strong> 10,000 customers | Churn 20.37% | OR 1.68 (inactive + single product) | 30% adoption sim</p>
-                        <p>Churn driven by behavioral disengagement, not demographics. Product depth + activity status strongest predictors. Targeting inactive single-product users yields highest reduction impact.</p>
-                        
-                        <div class="project-description">
-                            <p><strong>Approach:</strong> Built logistic regression model on 10,000 customers to quantify churn drivers and interaction effects. Performed feature engineering and odds ratio evaluation to identify high-risk segments (OR 1.68 for inactive × single product). Conducted scenario simulation assuming 30% adoption to estimate achievable churn reduction.</p>
-                        </div>
+                        <p>VerdaBank faced a 20.37% churn rate, exceeding the 19% industry benchmark. Analysis of 10,000 customers revealed that churn is primarily driven by shallow product relationships and customer inactivity, with single-product inactive customers showing 1.68x higher odds of churning and churning at nearly 2x the rate of active customers.</p>
                         
                         <div class="project-tools">Python · Logistic Regression · Feature Engineering</div>
-                        <a href="https://docs.google.com/presentation/d/1FDPk3lRIR7ScI9BcS4qRuwQje8F-rt9Y/edit?usp=sharing" target="_blank" class="project-link">View Project →</a>
+                        <a href="https://docs.google.com/presentation/d/1FDPk3lRIR7ScI9BcS4qRuwQje8F-rt9Y/edit?usp=sharing" target="_blank" class="project-link">View Deck →</a>
                     </div>
 
                     <div class="project-expanded-content">
-                        <h4>📊 Project Visualization</h4>
-                        <p><strong>Key Finding:</strong> Inactive single-product customers have 1.68x higher odds of churning. With 30% adoption of targeted intervention, churn rate can reduce from 20.37% to ~15%.</p>
-                        <p><strong>Data Distribution:</strong> Model trained on 10,000 customers, 20.37% churn baseline. Features: Product count, Account age, Transaction frequency, Support tickets.</p>
-                        <p><strong>Business Impact:</strong> Targeting 1,500 high-risk customers with retention programs could prevent 225+ churns quarterly.</p>
+                        <h4>📊 Project Details</h4>
+                        
+                        <div class="project-detail-section">
+                            <h5>Project Overview</h5>
+                            <p>This project analyzed VerdaBank's 20.37% churn rate, which exceeded the 19% industry benchmark, using a dataset of 10,000 customers across France, Germany, and Spain. Aiming for a 15% churn target within 12 months, the process involved data cleaning in Tableau, exploratory data analysis (EDA), and validation via Logistic Regression to identify how behavioral and demographic factors impact customer loyalty.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Tools & Method</h5>
+                            <p><strong>Tools:</strong> Python (Google Colab), Tableau, Kaggle Dataset.<br><strong>Methods:</strong> Data Preparation, Feature Engineering, EDA, Logistic Regression, Scenario Simulation.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Approach</h5>
+                            <p>Cleaned and standardized 10,000 customer records. Applied feature engineering to capture behavioral patterns and interaction effects. Conducted EDA across activity status, product depth, geography, and demographics. Validated drivers via logistic regression to quantify churn risk. Performed scenario simulations to estimate intervention impact.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Results & Insights</h5>
+                            <p><strong>Primary Churn Driver:</strong> Customer disengagement and shallow product relationships are the strongest predictors of churn.<br><strong>The "Single Product" Risk:</strong> Inactive customers holding only one product face the highest risk of leaving, with an Odds Ratio of 1.68.<br><strong>Demographic Neutrality:</strong> Financial, demographic, and geographic attributes do not independently explain churn as strongly as behavior does.<br><strong>Impact Potential:</strong> Converting 30% of single-product customers into multi-product users is estimated to reduce the overall churn rate by 1.62%.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Recommendations</h5>
+                            <p><strong>Prioritize 2nd Product Adoption:</strong> Focus on "product deepening" programs for single-product holders, as they represent the highest churn risk.<br><strong>Proactive Engagement:</strong> Launch automated reactivation campaigns for "Inactive" customers before they reach the high-risk churn window.<br><strong>Behavioral Targeting:</strong> Shift focus from demographic profiles to engagement status (Activity Index) as the primary metric for retention efforts.</p>
+                        </div>
+
+
+                        <div class="project-detail-section">
+                            <h5>Scope of Work</h5>
+                            <p>End-to-end analysis: business definition, data preparation & validation across 10,000 records, feature engineering & EDA, logistic regression modeling, odds ratio quantification, intervention scenario simulation, strategic roadmap development, and actionable retention prioritization (reactivation vs. product conversion strategies).</p>
+                        </div>
                     </div>
                 </div>
 
@@ -907,22 +958,44 @@
                         <div class="project-tag">Customer Analytics</div>
                     </div>
                     <div class="project-body">
-                        <p><strong>Key Metrics:</strong> Rp456.1B volume | Rp6.84B profit (1.5% margin) | Rp1.01B fraud loss | K=3 clusters</p>
-                        <p>Segment 2 = profit engine. Segment 1 = dormant with potential. Fraud reduction impacts profit faster than volume. Targeting high-value dormant segment unlocks biggest growth.</p>
+                        <p>RevoBank analyzed six months of credit card transaction data to optimize profitability margins at 1.5% per transaction. Segmentation analysis identified three distinct customer personas—Conservative, Dormant, and High-Value—with vastly different profitability profiles, revealing that the Dormant segment represents a significant reactivation opportunity.</p>
                         
-                        <div class="project-description">
-                            <p><strong>Approach:</strong> Analyzed six-month credit card transactions totaling Rp456.1B to evaluate profitability under a 1.5% margin model. Cleaned and standardized datasets before applying K-Means clustering (k=3) with feature scaling. Identified high-value, dormant, and conservative segments to support targeted performance strategy.</p>
-                        </div>
-                        
-                        <div class="project-tools">Python · K-Means · StandardScaler · EDA</div>
-                        <a href="https://docs.google.com/presentation/d/1EiCM2VAs1uk8DIFmhteSadhfmeAud0knW9wh3rkQ06c/edit?usp=sharing" target="_blank" class="project-link">View Project →</a>
+                        <div class="project-tools">Python · K-Means Clustering · StandardScaler · EDA</div>
+                        <a href="https://docs.google.com/presentation/d/1EiCM2VAs1uk8DIFmhteSadhfmeAud0knW9wh3rkQ06c/edit?usp=sharing" target="_blank" class="project-link">View Deck →</a>
                     </div>
 
                     <div class="project-expanded-content">
-                        <h4>📊 Segmentation Insights</h4>
-                        <p><strong>Segment Distribution:</strong> Segment 1 (25%) - Dormant but capable | Segment 2 (45%) - High-value, active | Segment 3 (30%) - Conservative, low-value</p>
-                        <p><strong>Profitability Breakdown:</strong> Segment 2 generates 70% of profits despite 45% of customers. Fraud rate 0.22% overall, but concentrated in Segment 1.</p>
-                        <p><strong>Strategic Recommendation:</strong> Activate Segment 1 (dormant) = highest ROI. Fraud reduction impacts profit growth faster than volume increase.</p>
+                        <h4>📊 Project Details</h4>
+                        
+                        <div class="project-detail-section">
+                            <h5>Project Overview</h5>
+                            <p>This analysis evaluated six months of RevoBank's credit card transaction data to boost profitability from a 1.5% transaction margin. Using a dataset of 8,950 records, the project focused on creating actionable user personas through data cleaning, handling missing values, and applying K-Means Clustering to group customers based on their spending behavior.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Tools & Method</h5>
+                            <p><strong>Tools:</strong> Python (Pandas, NumPy, Scikit-Learn), Matplotlib/Seaborn.<br><strong>Methods:</strong> Data Cleaning, Feature Engineering, K-Means Clustering, Customer Profiling.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Approach</h5>
+                            <p>Normalized customer metrics and applied unsupervised clustering to discover natural customer groupings. Profiled each segment across revenue, activity, and fraud dimensions. Identified growth and risk mitigation opportunities within each segment.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Results & Insights</h5>
+                            <p><strong>Persona Identification:</strong> Successfully segmented 8,950 customers into 3 distinct personas: Conservative, Dormant, and High-Value.<br><strong>High-Value Opportunity:</strong> Identified 162 High-Value customers who possess the highest credit limits and active transaction behavior, representing the primary profit-driving segment.<br><strong>Dormant Segment Potential:</strong> Segment 1 (Dormant) consists of financially capable customers with solid credit scores but low activity, representing a major reactivation opportunity.<br><strong>Profit Margin:</strong> All strategies are anchored to the bank's 1.5% profit margin earned per credit card transaction.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Recommendations</h5>
+                            <p><strong>Segment 1 Reactivation:</strong> Deploy specific performance programs to re-engage "Dormant" customers who are financially capable but low in activity.<br><strong>Premium Penetration:</strong> Prioritize Segment 2 (High-Value) for premium product offerings to maximize the 1.5% profit margin per transaction.<br><strong>Service Quality Retention:</strong> Maintain high service standards for Segment 0 (Conservative) without aggressive upselling to ensure long-term stability.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Scope of Work</h5>
+                            <p>Data preparation & standardization, cluster analysis with k=3 optimization, segment profiling (revenue, margin, fraud), business interpretation, and strategic recommendations for activation and fraud mitigation.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -933,22 +1006,39 @@
                         <div class="project-tag">Business Analytics</div>
                     </div>
                     <div class="project-body">
-                        <p><strong>Key Metrics:</strong> Sales ↑20.4% | Orders ↑28.3% | Profit ↓13.6%</p>
-                        <p>Growth driven by volume, not profitability. Excessive discounting and misaligned commission structure destroying margins. Recommended discount cap and incentive formula revision.</p>
-                        
-                        <div class="project-description">
-                            <p><strong>Approach:</strong> Conducted margin and KPI diagnostics to explain the 13.6% corporate profit decline despite 20.4% sales growth. Decomposed revenue, order volume, discount rate, and commission structure to isolate margin leakage drivers. Identified excessive discount dependency and misaligned incentives as primary contributors to profitability erosion.</p>
-                        </div>
+                        <p>Revoshion experienced a 13.6% profit decline despite 20.4% sales growth, indicating structural margin erosion. Root cause analysis revealed that excessive discounting emerged as the primary margin drain, growing faster than sales volume, while the commission structure misalignment incentivizes volume over profitability.</p>
                         
                         <div class="project-tools">Margin Analysis · KPI Breakdown · Root Cause Framework</div>
-                        <a href="https://docs.google.com/presentation/d/12LBpZuF8HLjef07rHZGlOH5xe2oehVPkLE0XtrL-Wz8/edit?usp=sharing" target="_blank" class="project-link">View Project →</a>
+                        <a href="https://docs.google.com/presentation/d/12LBpZuF8HLjef07rHZGlOH5xe2oehVPkLE0XtrL-Wz8/edit?usp=sharing" target="_blank" class="project-link">View Deck →</a>
                     </div>
 
                     <div class="project-expanded-content">
-                        <h4>📊 Margin Leakage Analysis</h4>
-                        <p><strong>Root Cause Breakdown:</strong> Discount impact -8.3% margin | Commission structure -3.2% margin | Product mix shift -2.1% margin</p>
-                        <p><strong>Granular Findings:</strong> Average discount increased from 12% to 16% YoY. Commission as % of sales rose from 4% to 5.5%, misaligned with gross profit.</p>
-                        <p><strong>Recommended Actions:</strong> Implement discount cap at 15%, restructure commissions tied to profit not sales, optimize product mix. Projected margin recovery: 13.6% → 18% within 12 months.</p>
+                        <h4>📊 Project Details</h4>
+                        
+                        <div class="project-detail-section">
+                            <h5>Project Overview</h5>
+                            <p>This project diagnosed Revoshion's corporate profit crisis, where profits fell 13.6% despite a 20.4% growth in sales. Using the Superstore Dashboard, the analysis utilized an Issue Tree for root cause identification to uncover the top factors driving margin decline and developed data-driven recommendations to restore profitability by 10% within a year.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Tools & Method</h5>
+                            <p><strong>Tools:</strong> Superstore Dashboard (Priya Padham), Excel/PowerPoint.<br><strong>Methods:</strong> Root Cause Analysis (Issue Tree), DARCI Model, Trend Analysis, Policy Review.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Approach</h5>
+                            <p>Decomposed profit variance into components (discount, commission, product mix) to isolate root causes. Analyzed margin trends over time to identify inflection points and policy changes driving deterioration. Benchmarked current state against historical performance to quantify impact magnitude. Developed policy-level interventions targeting structural issues rather than tactical adjustments.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Results & Insights</h5>
+                            <p><strong>Profit-Growth Gap:</strong> Identified a critical performance gap where corporate profits declined by 13.6% despite a healthy 20.4% increase in sales.<br><strong>Root Cause - Discounting:</strong> High average discount percentages per corporate order were found to be the primary driver of margin erosion.<br><strong>Suboptimal Product Mix:</strong> High sales volume is currently concentrated in low-margin basic products, preventing volume from converting into profit growth.<br><strong>Recovery Target:</strong> Internal policy interventions are projected to recover the 13.6% loss and achieve a 10% profit growth target within 12 months.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Scope of Work</h5>
+                            <p>Margin analysis across product lines, discount rate trending, commission structure evaluation, comparative benchmarking, and policy-level intervention recommendations targeting margin recovery.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -959,22 +1049,39 @@
                         <div class="project-tag">Statistical Testing</div>
                     </div>
                     <div class="project-body">
-                        <p><strong>Key Metrics:</strong> 10,159 transactions | RoD 12/12 = 58.54% | Cost ratio = 1.71%</p>
-                        <p>Campaign 12/12 most cost-efficient. Campaign 11/11 highest revenue but overspends. Optimal strategy: scale like 11/11, spend like 12/12 to achieve 10% growth.</p>
-                        
-                        <div class="project-description">
-                            <p><strong>Approach:</strong> Analyzed 10,159 transaction records to evaluate revenue and discount efficiency across three campaigns. Applied data cleaning, IQR-based outlier filtering, and Return on Discount (RoD) calculations to benchmark cost efficiency. Identified 12/12 as the most efficient campaign model with lowest cost ratio.</p>
-                        </div>
+                        <p>TokoBli evaluated the efficiency of three "Twin-Date" promotional campaigns (10/10, 11/11, 12/12) across 10,159 transactions. Analysis revealed significant variations in campaign efficiency, with Campaign 12/12 achieving the highest profit margin per transaction at 58.54% Return on Discount, while Campaign 11/11 delivered higher revenue volume but at the cost of higher discount spending.</p>
                         
                         <div class="project-tools">Excel · IQR Outlier Removal · RoD Analysis · A/B Logic</div>
-                        <a href="https://docs.google.com/presentation/d/14FJ3px_3bOd3Arrl0-dn1dvunhVEsL0pg-90_uC0JKI/edit?usp=sharing" target="_blank" class="project-link">View Project →</a>
+                        <a href="https://docs.google.com/presentation/d/14FJ3px_3bOd3Arrl0-dn1dvunhVEsL0pg-90_uC0JKI/edit?usp=sharing" target="_blank" class="project-link">View Deck →</a>
                     </div>
 
                     <div class="project-expanded-content">
-                        <h4>📊 Campaign Efficiency Comparison</h4>
-                        <p><strong>Campaign Performance:</strong> 12/12: RoD 58.54%, Cost ratio 1.71% (most efficient) | 11/11: RoD 82.3%, Cost ratio 3.24% (highest revenue) | 10/10: RoD 42.1%, Cost ratio 2.89%</p>
-                        <p><strong>Transaction Profile:</strong> 10,159 transactions analyzed, 12 outliers removed via IQR. Average order value varies 45% across campaigns.</p>
-                        <p><strong>Recommended Strategy:</strong> Hybrid approach - Scale 11/11 revenue model with 12/12 discount spending discipline. Projected 10% revenue growth with 2% reduction in discount burn.</p>
+                        <h4>📊 Project Details</h4>
+                        
+                        <div class="project-detail-section">
+                            <h5>Project Overview</h5>
+                            <p>This study evaluated the efficiency of TokoBli's "Twin-Date" campaigns (10/10, 11/11, 12/12) to optimize future marketing spend. By performing A/B Testing (T-test) on transaction data, the project aimed to increase revenue by 10% by comparing revenue-per-unit-discount and identifying the most cost-efficient campaign strategy.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Tools & Method</h5>
+                            <p><strong>Tools:</strong> Excel/Google Sheets (F-test, T-test), PowerPoint.<br><strong>Methods:</strong> Descriptive Statistics, A/B Testing, Hypothesis Testing (One-tailed T-test), Data Cleaning, Return on Discount (RoD) Analysis.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Approach</h5>
+                            <p>Cleaned transaction data to remove outliers before analysis. Developed efficiency metric (RoD) to compare campaigns on consistent basis. Benchmarked each campaign across multiple dimensions (efficiency, revenue, cost). Modeled hybrid approach combining strengths of each strategy to optimize both revenue and profitability simultaneously.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Results & Insights</h5>
+                            <p><strong>Design Significance:</strong> The New Product Page Design was proven to be extremely effective with a P-value of 0.0%, far below the 5% significance threshold.<br><strong>T-Stat Magnitude:</strong> A T-stat of 8.008 indicates that the difference in transaction value between the new and old design is approximately 8 times greater than the standard error.<br><strong>Campaign Efficiency:</strong> Analysis of historical "Twin-Date" campaigns (10/10, 11/11, 12/12) identified specific scenarios that maximize revenue-per-unit-discount.<br><strong>Revenue Goal:</strong> Validated a data-driven path to achieve a 10% revenue increase over the historical average.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Scope of Work</h5>
+                            <p>Transaction cleaning & validation, campaign performance benchmarking via RoD analysis, cost efficiency assessment, hybrid strategy modeling, and revenue projection under controlled discount spending.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -985,22 +1092,39 @@
                         <div class="project-tag">SQL Analytics</div>
                     </div>
                     <div class="project-body">
-                        <p><strong>Key Metrics:</strong> ~98K customers | Confections = 12.87% revenue share | Top 3 = 35% concentration</p>
-                        <p>Revenue driven by customer depth, not headcount. Confections strongest via high repeat rate. Concentration risk exists—growth lever in dormant segments.</p>
-                        
-                        <div class="project-description">
-                            <p><strong>Approach:</strong> Performed multi-table SQL analysis to assess revenue contribution, pricing structure, repeat rate, and revenue per customer. Used CTEs and window functions to compute revenue share and concentration metrics. Found revenue variance driven by spending behavior rather than customer acquisition volume.</p>
-                        </div>
+                        <p>RevoGrocers analyzed retail performance across product categories to optimize operations and marketing strategy. Analysis of customer purchasing patterns revealed that revenue is heavily concentrated in top-performing categories driven more by customer purchasing behavior and repeat rates than by category volume alone, with the "Confections" category leading at 12.87% of total revenue.</p>
                         
                         <div class="project-tools">SQL · CTE · Window Functions · Aggregation</div>
-                        <a href="https://docs.google.com/presentation/d/1Z3s2xWqqMDA5OfnYFN3eG7V7SwCIXq7SWaJdi8_JqKs/edit?usp=sharing" target="_blank" class="project-link">View Project →</a>
+                        <a href="https://docs.google.com/presentation/d/1Z3s2xWqqMDA5OfnYFN3eG7V7SwCIXq7SWaJdi8_JqKs/edit?usp=sharing" target="_blank" class="project-link">View Deck →</a>
                     </div>
 
                     <div class="project-expanded-content">
-                        <h4>📊 Revenue Driver Analysis</h4>
-                        <p><strong>Category Breakdown:</strong> Top 3 categories = 35% revenue share (Confections 12.87%, Dairy 11.43%, Meat/Poultry 10.7%). Remaining 12 categories = 65% revenue.</p>
-                        <p><strong>Customer Behavior:</strong> Confections customers have 3.2x higher repeat rate vs average. Revenue per customer varies 2.8x across categories, driven by purchase frequency not unit price.</p>
-                        <p><strong>Risk & Opportunity:</strong> Concentration risk exists (top 3 = 35%). Growth lever: Activate dormant customers in high-margin categories. ~98K customers, significant untapped potential.</p>
+                        <h4>📊 Project Details</h4>
+                        
+                        <div class="project-detail-section">
+                            <h5>Project Overview</h5>
+                            <p>This project analyzed retail performance across product categories for RevoGrocers to optimize operations and marketing. Using SQL to extract key metrics such as revenue-after-discount and customer loyalty, the analysis addressed business-critical questions regarding high-performing categories and identified revenue concentration risks within the dataset.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Tools & Method</h5>
+                            <p><strong>Tools:</strong> SQL (BigQuery/Google Cloud), Kaggle Dataset.<br><strong>Methods:</strong> Exploratory Data Analysis (EDA), SQL Join & Aggregation, Customer Loyalty Analysis, Data Quality Audit.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Approach</h5>
+                            <p>Integrated multiple data tables to create unified customer-transaction view. Computed customer-level metrics (repeat rate, revenue contribution) to understand behavior patterns. Analyzed revenue distribution across categories and customer segments. Identified concentration risks and growth opportunities through comparative analysis of high-performing vs underperforming segments.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Results & Insights</h5>
+                            <p><strong>Category Dominance:</strong> The "Confections" category is the top revenue performer, contributing 12.87% of total revenue.<br><strong>Customer Retention:</strong> Repeat purchase rates are exceptionally strong, ranging between 93% and 99% across most categories.<br><strong>Data Integrity Gap:</strong> Discovered a significant "Unknown" category involving 14.9k transactions, signaling an urgent need for data audit.<br><strong>Concentration Risk:</strong> The top 3 categories collectively represent 35% of total sales, indicating high dependence on a small set of product types.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Scope of Work</h5>
+                            <p>Multi-table dataset integration, revenue contribution analysis by category, customer loyalty profiling via repeat rate, concentration risk assessment, and identification of growth levers in dormant customer segments.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -1011,22 +1135,39 @@
                         <div class="project-tag">Data Visualization</div>
                     </div>
                     <div class="project-body">
-                        <p><strong>Key Metrics:</strong> 1,000 transactions | 94% budget utilization | 111% discretionary overspending</p>
-                        <p>Mid-value frequent transactions drive pressure, not outliers. Year-end spike creates cumulative budget stress. Dashboard enables early detection of spending risk.</p>
-                        
-                        <div class="project-description">
-                            <p><strong>Approach:</strong> Developed Tableau dashboard integrating transaction, merchant, and budget datasets using relationship-based data modeling. Built FIXED LOD calculations to ensure consistent aggregation across views. Identified overspending patterns (111% discretionary utilization) and seasonal budget pressure through trend analysis.</p>
-                        </div>
+                        <p>RevoFinance developed an interactive Tableau dashboard to help users monitor personal spending habits and budget allocation. Analysis revealed that spending is driven primarily by frequent mid-value transactions rather than large outliers, with most transactions falling in the Rp 250K–750K range, and a significant seasonal spike in December creating annual budget pressure.</p>
                         
                         <div class="project-tools">Tableau · FIXED LOD · Data Modeling</div>
-                        <a href="https://docs.google.com/presentation/d/1ASOSnq_oqJ5u7np2VT1Ejx6GS3VTd3iRfCXFE4pO9P8/edit?usp=sharing" target="_blank" class="project-link">View Project →</a>
+                        <a href="https://docs.google.com/presentation/d/1ASOSnq_oqJ5u7np2VT1Ejx6GS3VTd3iRfCXFE4pO9P8/edit?usp=sharing" target="_blank" class="project-link">View Deck →</a>
                     </div>
 
                     <div class="project-expanded-content">
-                        <h4>📊 Dashboard Metrics & Insights</h4>
-                        <p><strong>Budget Tracking:</strong> Overall utilization 94% (healthy). Discretionary category 111% over budget (overspend area). Monthly trend shows 8% growth in spending.</p>
-                        <p><strong>Transaction Pattern:</strong> 1,000 transactions over 12 months. Mid-range transactions (Rp500K-2M) drive 60% of pressure. Year-end spike 23% above monthly average.</p>
-                        <p><strong>Key Features:</strong> FIXED LOD ensures consistent aggregation across merchant/category filters. Merchant ranking identifies top 3 accounts = 34% spending. Seasonal analysis reveals December spike opportunity for budget planning.</p>
+                        <h4>📊 Project Details</h4>
+                        
+                        <div class="project-detail-section">
+                            <h5>Project Overview</h5>
+                            <p>This project developed an interactive Tableau dashboard to help RevoFinance users monitor their personal spending habits. By comparing actual expenses against planned budgets, the visualization identifies areas of overspending through monthly trend analysis and transaction distribution, supporting smarter financial decision-making for individual users.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Tools & Method</h5>
+                            <p><strong>Tools:</strong> Tableau, Excel (Data Source).<br><strong>Methods:</strong> Data Visualization, Dashboard Design, Trend Analysis, Budget vs. Actual Analysis, Seasonal Pattern Detection.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Approach</h5>
+                            <p>Built data model enabling dynamic filtering across multiple dimensions without losing aggregation consistency. Designed dashboard views to reveal spending patterns at transaction, merchant, and category levels. Incorporated time-based analysis to identify seasonal variations and early warning signals. Emphasized interactivity to enable self-service exploration of budget vs actual spending dynamics.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Results & Insights</h5>
+                            <p><strong>Spending Frequency:</strong> Most transactions fall within the Rp 250K–750K range, showing that spending growth is driven by frequent mid-value purchases rather than rare large outliers.<br><strong>Seasonal Volatility:</strong> Spending remains stable throughout the year but spikes sharply in December, creating significant budget pressure.<br><strong>Budget Stability:</strong> Essential spending categories (Utilities, Transport, Groceries) are highly predictable, consistently staying within 77–83% of the budget.<br><strong>Overspending Awareness:</strong> The interactive dashboard successfully identifies overspending risks early by comparing actual expenses against planned monthly budgets.</p>
+                        </div>
+
+                        <div class="project-detail-section">
+                            <h5>Scope of Work</h5>
+                            <p>Data integration (transactions and budget), dashboard design and layout, LOD metric development, merchant and category analysis, trend detection, seasonal pattern identification, and actionable budget alerts.</p>
+                        </div>
                     </div>
                 </div>
             </div>
